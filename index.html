@@ -53,11 +53,33 @@
       margin-bottom: 25px;
     }
 
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .header img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #d4af37;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    .header-info {
+      flex: 1;
+      min-width: 200px;
+    }
+
     .contact-info {
       display: flex;
       flex-wrap: wrap;
       gap: 15px;
       font-weight: 500;
+      margin-top: 5px;
     }
 
     .contact-info span {
@@ -72,17 +94,29 @@
       .contact-info {
         flex-direction: column;
       }
+
+      .header {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .header-info {
+        min-width: 100%;
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <header>
-      <h1>Rikita Bhatt</h1>
-      <div class="contact-info">
-        <span>Email: rikita@example.com</span>
-        <span>Phone: +91 9999999999</span>
-        <span>Location: Ahmedabad, India</span>
+    <header class="header">
+      <img src="images/rikita.jpeg" alt="Rikita Bhatt">
+      <div class="header-info">
+        <h1>Rikita Bhatt</h1>
+        <div class="contact-info">
+          <span>Email: rikita@example.com</span>
+          <span>Phone: +91 9999999999</span>
+          <span>Location: Ahmedabad, India</span>
+        </div>
       </div>
     </header>
 
