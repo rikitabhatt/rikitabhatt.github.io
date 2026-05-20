@@ -1,225 +1,505 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rikita Bhatt - Resume</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f4f4f4;
-      color: #333;
-    }
-
-    .container {
-       max-width: 60%;
-      /* max-width: 800px; */
-      margin: 40px auto;
-      background: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
-
-    h1, h2, h3 {
-      margin-bottom: 10px;
-      color: #222;
-    }
-
-    h1 {
-      font-size: 2rem;
-    }
-
-    h2 {
-      font-size: 1.5rem;
-      border-bottom: 2px solid #d4af37;
-      padding-bottom: 5px;
-      margin-top: 30px;
-    }
-
-    p {
-      margin: 5px 0;
-      line-height: 1.5;
-    }
-
-    ul {
-      padding-left: 20px;
-      margin: 5px 0;
-    }
-
-    .section {
-      margin-bottom: 25px;
-    }
-
-    .header {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .header img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid #d4af37;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    }
-
-    .header-info {
-      flex: 1;
-      min-width: 200px;
-    }
-
-    .contact-info {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 5px;
-      font-weight: 500;
-      margin-top: 5px;
-    }
-
-    .contact-info span {
-      background: #d4af37;
-      color: #fff;
-      padding: 5px 10px;
-      border-radius: 5px;
-    }
-
-    a {
-      color: #fff;
-      text-decoration: underline;
-    }
-
-    /* Responsive */
-    @media (max-width: 600px) {
-      .contact-info {
-        flex-direction: column;
-      }
-
-      .header {
-        justify-content: center;
-        text-align: center;
-      }
-
-      .header-info {
-        min-width: 100%;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rikita Bhatt — Lead Web Developer</title>
+    <style>
+        :root {
+            --primary: #1a1a2e;
+            --secondary: #16213e;
+            --accent: #0f3460;
+            --highlight: #e94560;
+            --text: #333;
+            --light: #f8f9fa;
+            --border: #e0e0e0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: #fff;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        /* Header */
+        header {
+            background: var(--primary);
+            color: #fff;
+            padding: 4rem 0 3rem;
+            border-bottom: 4px solid var(--highlight);
+        }
+        
+        .header-content h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.5px;
+        }
+        
+        .title {
+            font-size: 1.3rem;
+            color: #e0e0e0;
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            font-size: 0.95rem;
+        }
+        
+        .contact-bar a {
+            color: #fff;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s;
+        }
+        
+        .contact-bar a:hover {
+            border-bottom-color: var(--highlight);
+        }
+        
+        .contact-bar span {
+            opacity: 0.8;
+        }
+        
+        /* Sections */
+        section {
+            padding: 3rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        h2 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--highlight);
+            display: inline-block;
+        }
+        
+        h3 {
+            font-size: 1.2rem;
+            color: var(--secondary);
+            margin-bottom: 0.25rem;
+        }
+        
+        .meta {
+            font-size: 0.9rem;
+            color: #666;
+            font-style: italic;
+            margin-bottom: 0.75rem;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        ul li {
+            padding-left: 1.2rem;
+            position: relative;
+            margin-bottom: 0.5rem;
+        }
+        
+        ul li::before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: var(--highlight);
+            font-weight: bold;
+        }
+        
+        /* Skills */
+        .skill-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .skill-category h4 {
+            color: var(--accent);
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.5rem;
+        }
+        
+        .skill-category p {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin: 0;
+        }
+        
+        /* Experience */
+        .job {
+            margin-bottom: 2.5rem;
+        }
+        
+        .job:last-child {
+            margin-bottom: 0;
+        }
+        
+        /* Projects Grid - No Images */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .project-card {
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            background: #fff;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border-top: 4px solid var(--highlight);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+        
+        .project-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+        }
+        
+        .project-tech {
+            font-size: 0.85rem;
+            color: var(--highlight);
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            display: block;
+        }
+        
+        .project-card ul {
+            font-size: 0.9rem;
+        }
+        
+        .project-card ul li {
+            margin-bottom: 0.4rem;
+        }
+        
+        .project-card ul li::before {
+            content: "•";
+            color: var(--accent);
+        }
+        
+        /* Education */
+        .edu-item {
+            margin-bottom: 1rem;
+        }
+        
+        .edu-item strong {
+            color: var(--secondary);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+            font-size: 0.9rem;
+        }
+        
+        footer a {
+            color: var(--highlight);
+            text-decoration: none;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content h1 {
+                font-size: 2rem;
+            }
+            
+            .contact-bar {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            section {
+                padding: 2rem 0;
+            }
+        }
+        
+        /* Print styles */
+        @media print {
+            header, footer {
+                background: #fff;
+                color: #000;
+                border: none;
+            }
+            
+            header a, footer a {
+                color: #000;
+            }
+            
+            .project-card {
+                break-inside: avoid;
+                box-shadow: none;
+                border: 1px solid #ccc;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <header class="header">
-      <img src="rikita.jpeg" alt="Rikita Bhatt">
-      <div class="header-info">
-        <h1>Rikita Bhatt</h1>
-        <div class="contact-info">
-          <span>Email: rikita26@gmail.com</span>
-          <span>LinkedIn: <a href="https://www.linkedin.com/in/rikitabhatt26" target="_blank">rikitabhatt26</a></span>
-          <!-- <span>Phone: +91 9714730577</span> -->
-          <span>Location: Vadodara, India</span>
+
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1>Rikita Bhatt</h1>
+                <div class="title">Lead Web Developer | PHP • Laravel • React.js • AWS • AI Integration</div>
+                <div class="contact-bar">
+                    <span>Vadodara, India</span>
+                    <span>|</span>
+                    <a href="tel:+919714730587">+91 97147 30587</a>
+                    <span>|</span>
+                    <a href="mailto:rikita26@gmail.com">rikita26@gmail.com</a>
+                    <span>|</span>
+                    <a href="https://linkedin.com/in/rikitabhatt26" target="_blank">LinkedIn</a>
+                    <span>|</span>
+                    <a href="https://github.com/rikitabhatt" target="_blank">GitHub</a>
+                </div>
+            </div>
         </div>
-      </div>
     </header>
 
-    <section class="section">
-      <h2>Profile</h2>
-      <p>Full Stack Web Developer with experience in PHP, Laravel, React, and Next.js. Passionate about building clean and efficient web applications.</p>
-    </section>
+    <main class="container">
+        
+        <!-- Summary -->
+        <section id="summary">
+            <h2>Professional Summary</h2>
+            <p>
+                Lead Web Developer with 10+ years of experience building and scaling web platforms and RESTful APIs using 
+                <strong>PHP (Laravel/Lumen/CodeIgniter)</strong> and <strong>JavaScript (React.js/Next.js/TypeScript)</strong>. 
+                Proven engineering leader with hands-on experience managing 10+ person development teams, driving end-to-end 
+                project delivery from technical estimation and system architecture through AWS cloud deployment and client handoff. 
+                Known for successfully migrating legacy systems to modern frameworks, optimizing database performance, and 
+                integrating <strong>AI/LLM APIs</strong> into production-grade applications. Consistent track record of delivering 
+                secure, high-availability platforms across e-commerce, SaaS, travel booking, and logistics industries — on time 
+                and within scope.
+            </p>
+        </section>
 
-    <section class="section">
-      <h2>Work Experience</h2>
+        <!-- Skills -->
+        <section id="skills">
+            <h2>Core Competencies</h2>
+            <div class="skill-grid">
+                <div class="skill-category">
+                    <h4>Backend & Frameworks</h4>
+                    <p>PHP, Laravel, Lumen, CodeIgniter, REST API Development, MySQL</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Frontend</h4>
+                    <p>JavaScript, React.js, Next.js, TypeScript, jQuery, HTML5, CSS3, Sass, Bootstrap</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Cloud & DevOps</h4>
+                    <p>AWS (EC2, S3, IAM), Deployment, Ubuntu Server, cPanel</p>
+                </div>
+                <div class="skill-category">
+                    <h4>CMS</h4>
+                    <p>WordPress (Custom Themes, Plugins, WooCommerce)</p>
+                </div>
+                <div class="skill-category">
+                    <h4>AI & Automation</h4>
+                    <p>OpenAI API, Claude API, GitHub Copilot, Cursor, Prompt Engineering, AI Chatbot Integration</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Tools & Workflow</h4>
+                    <p>Git, GitHub, Bitbucket, Jira, Basecamp, Trello, Notion, Linear, GTmetrix</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Leadership</h4>
+                    <p>Team Management, Sprint Planning, Code Review, Client Relations, Project Estimation, UAT</p>
+                </div>
+            </div>
+        </section>
 
-      <h3>Lead Web Developer - Pavans Group</h3>
-      <p><em>May 2023 - Present</em></p>
-      <ul>
-        <li>Lead development process, project management, client communications, code review, mobile & iOS web services, and team leadership.</li>
-      </ul>
+        <!-- Experience -->
+        <section id="experience">
+            <h2>Professional Experience</h2>
+            
+            <div class="job">
+                <h3>Pavans Group — Lead Web Developer</h3>
+                <div class="meta">May 2023 – Present | Vadodara</div>
+                <ul>
+                    <li>Lead architecture and full-stack delivery for multiple concurrent web and mobile API projects using Laravel.</li>
+                    <li>Own end-to-end development process: sprint planning, task assignment, code reviews, and deployment strategy.</li>
+                    <li>Serve as primary client liaison, translating business requirements into technical roadmaps and managing stakeholder expectations.</li>
+                    <li>Architect iOS and mobile web service APIs, ensuring secure, scalable integration with frontend and mobile teams.</li>
+                    <li>Mentor cross-functional developers and enforce coding standards, resulting in faster delivery cycles and reduced production bugs.</li>
+                </ul>
+            </div>
 
-      <h3>Senior PHP Developer - Consumer Sketch Pvt Ltd</h3>
-      <p><em>July 2021 - Nov 2022</em></p>
-      <ul>
-        <li>Managed a 10-person PHP team and handled 3 projects from estimation to execution.</li>
-      </ul>
+            <div class="job">
+                <h3>Consumer Sketch Pvt Ltd — Senior PHP Developer</h3>
+                <div class="meta">July 2021 – November 2022 | Vadodara</div>
+                <ul>
+                    <li>Led a 10-person PHP team across 3 simultaneous projects, owning estimation, resource allocation, and delivery timelines.</li>
+                    <li>Directed full-stack development using Laravel and React.js, building custom modules and high-performance RESTful APIs.</li>
+                    <li>Established deployment workflows and version-control strategies that improved release stability and reduced rollback incidents.</li>
+                    <li>Presented technical solutions and progress updates to C-level clients, maintaining a 95%+ on-time delivery rate.</li>
+                </ul>
+            </div>
 
-      <h3>PHP Developer - Avdevs LLP</h3>
-      <p><em>June 2020 - June 2021</em></p>
-      <ul>
-        <li>Worked with Laravel and ReactJS for client projects.</li>
-      </ul>
+            <div class="job">
+                <h3>Avdevs LLP — PHP Developer</h3>
+                <div class="meta">June 2020 – June 2021 | Vadodara</div>
+                <ul>
+                    <li>Engineered robust backend systems and dynamic frontends using Laravel and React.js for SaaS and service-based platforms.</li>
+                    <li>Refactored MySQL database schemas and optimized slow queries, significantly improving application response times.</li>
+                    <li>Integrated third-party APIs and secure payment gateways, ensuring reliable transaction processing.</li>
+                </ul>
+            </div>
 
-      <h3>PHP Developer - eRoam Technologies Pty Ltd</h3>
-      <p><em>Dec 2019 - June 2020</em></p>
-      <ul>
-        <li>Experience with Lumen framework in Laravel.</li>
-      </ul>
+            <div class="job">
+                <h3>eRoam Technologies Pty Ltd — PHP Developer</h3>
+                <div class="meta">December 2019 – June 2020 | Vadodara</div>
+                <ul>
+                    <li>Developed microservices and backend admin panels using Lumen (Laravel) for a global travel technology platform.</li>
+                    <li>Built and documented RESTful APIs consumed by mobile and web clients, focusing on low-latency responses.</li>
+                    <li>Collaborated with international teams across time zones to deliver features for high-volume booking operations.</li>
+                </ul>
+            </div>
 
-      <h3>PHP Developer - Couldester</h3>
-      <p><em>Dec 2018 - Dec 2019</em></p>
-      <ul>
-        <li>Worked on multiple PHP web projects using CodeIgniter and Laravel.</li>
-      </ul>
+            <div class="job">
+                <h3>Couldster — PHP Developer</h3>
+                <div class="meta">December 2018 – December 2019 | Vadodara</div>
+                <ul>
+                    <li>Delivered custom web applications on modern PHP stacks, maintaining high standards for security and code quality.</li>
+                    <li>Troubleshot and refactored legacy codebases to improve performance and reduce technical debt.</li>
+                </ul>
+            </div>
 
-      <h3>PHP Developer - Spaculus Software Services</h3>
-      <p><em>Dec 2015 - Dec 2018</em></p>
-      <ul>
-        <li>Worked with CodeIgniter, Laravel, and Magento2 frameworks.</li>
-      </ul>
+            <div class="job">
+                <h3>Spaculus Software Services — PHP Developer</h3>
+                <div class="meta">December 2015 – December 2018 | Vadodara</div>
+                <ul>
+                    <li>Built and maintained 10+ client projects using CodeIgniter, Laravel, WordPress, and Magento 2 across e-commerce, healthcare, and service industries.</li>
+                    <li>Customized Magento 2 storefronts and developed bespoke Laravel applications tailored to complex business logic.</li>
+                    <li>Managed modules end-to-end, from database design and API development to frontend implementation and UAT support.</li>
+                </ul>
+            </div>
 
-      <h3>Core PHP Developer - Susthitha Softech</h3>
-      <p><em>Apr 2015 - Aug 2015</em></p>
-      <ul>
-        <li>Handled front-end and back-end of ERP System.</li>
-      </ul>
+            <div class="job">
+                <h3>Susthitha Softech — Core PHP Developer</h3>
+                <div class="meta">April 2015 – August 2015 | Vadodara</div>
+                <ul>
+                    <li>Developed front-end and back-end modules for an internal ERP system, streamlining inventory and HR workflows.</li>
+                </ul>
+            </div>
+        </section>
 
-      <h3>Trainee - Logic Express</h3>
-      <p><em>Oct 2014 - Mar 2015</em></p>
+        <!-- Projects -->
+        <section id="projects">
+            <h2>Selected Projects</h2>
+            <div class="projects-grid">
+                
+                <div class="project-card">
+                    <h3>Ciclon Energy</h3>
+                    <span class="project-tech">WordPress, MySQL, Custom REST API | Developer</span>
+                    <ul>
+                        <li>Architected a custom WordPress e-commerce engine with a dedicated iOS API, enabling seamless mobile shopping experiences.</li>
+                        <li>Optimized database queries and caching strategies to handle high-volume product catalogs and traffic spikes.</li>
+                    </ul>
+                </div>
 
-      <h3>Assistant Lecturer - K.J.I.T College, Savli</h3>
-      <p><em>Sep 2012 - Sep 2014</em></p>
-    </section>
+                <div class="project-card">
+                    <h3>Dixie Tile</h3>
+                    <span class="project-tech">React.js, Laravel 8, MySQL | Team Lead & Developer</span>
+                    <ul>
+                        <li>Led frontend and backend development for a dynamic tile marketplace, implementing product configurators and real-time inventory management.</li>
+                        <li>Managed deployment pipeline and server configuration, ensuring high availability during peak sales periods.</li>
+                        <li>Designed and implemented a new CI/CD deployment process, cutting release overhead and deployment errors.</li>
+                    </ul>
+                </div>
 
-    <section class="section">
-      <h2>Education</h2>
-      <ul>
-        <li>M.C.A. from IGNOU (MSU Study Center) - 60% (First Class)</li>
-        <li>PGDCA from IGNOU - 62% (First Class)</li>
-        <li>B.C.A from MSU - 54.41% (Second Class) - 2009</li>
-        <li>Class 12 (Commerce Stream) GSFC School, Vadodara - 70.40% - 2005</li>
-        <li>Class 10 GSFC School, Vadodara - 70.71% - 2003</li>
-      </ul>
-    </section>
+                <div class="project-card">
+                    <h3>Use Carter</h3>
+                    <span class="project-tech">Laravel 8, MySQL | Project Manager</span>
+                    <ul>
+                        <li>Directed a cross-functional team to build a logistics platform featuring real-time route optimization and shipment tracking.</li>
+                        <li>Owned client communication, cloud server architecture, and task assignment; delivered the platform from concept to production.</li>
+                    </ul>
+                </div>
 
-    <section class="section">
-      <h2>Skills</h2>
-      <ul>
-        <li>Programming: PHP, JavaScript, HTML, CSS, TypeScript</li>
-        <li>Frameworks: Laravel, CodeIgniter, Next.js, React.js, Magento2</li>
-        <li>CMS: WordPress</li>
-        <li>Front-end Tools: VS Code, Sublime, Bootstrap, Metro UI, Sass</li>
-        <li>Back-end Tools: XAMPP, LAMP, WAMP, NVM, NPM</li>
-        <li>Database: MySQL</li>
-        <li>Version Control: GitHub, Bitbucket</li>
-        <li>Project Management: Jira, Basecamp, Trello, Notion, Linear</li>
-        <li>Performance Testing: GTmetrix</li>
-        <li>Cloud: AWS (EC2, S3, IAM, deployment)</li>
-        <li>Operating Systems: Windows 98/2000/XP/7, Ubuntu (Basic)</li>
-      </ul>
-    </section>
+                <div class="project-card">
+                    <h3>Zonbase</h3>
+                    <span class="project-tech">Laravel 8, MySQL | Developer</span>
+                    <ul>
+                        <li>Built data-intensive search and filtering tools processing large-scale Amazon marketplace datasets.</li>
+                        <li>Engineered scalable backend services to support thousands of concurrent seller queries with minimal latency.</li>
+                    </ul>
+                </div>
 
-    <section class="section">
-      <h2>Languages</h2>
-      <ul>
-        <li>English - Professional</li>
-        <li>Gujarati - Native</li>
-        <li>Hindi - Fluent</li>
-      </ul>
-    </section>
-  </div>
+                <div class="project-card">
+                    <h3>Core Pilot (Liberty Energy)</h3>
+                    <span class="project-tech">Next.js, Oracle | Frontend Developer</span>
+                    <ul>
+                        <li>Developed a Google Forms-like enterprise application using Next.js and Oracle, streamlining internal HR and compliance workflows.</li>
+                        <li>Implemented responsive UI components and complex client-side state management for multi-step forms.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section id="education">
+            <h2>Education</h2>
+            <div class="edu-item">
+                <strong>Master of Computer Applications (MCA)</strong> — IGNOU (MSU Study Center) | First Class | 2012
+            </div>
+            <div class="edu-item">
+                <strong>Post Graduate Diploma (PGDCA)</strong> — IGNOU | First Class | 2010
+            </div>
+            <div class="edu-item">
+                <strong>Bachelor of Computer Applications (BCA)</strong> — MSU, Vadodara | 2009
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Rikita Bhatt Built for GitHub Pages.</p>
+            <p>
+                <a href="https://linkedin.com/in/rikitabhatt26" target="_blank">LinkedIn</a> • 
+                <a href="https://github.com/rikitabhatt" target="_blank">GitHub</a> • 
+                <a href="mailto:rikita26@gmail.com">Email</a>
+            </p>
+        </div>
+    </footer>
+
 </body>
 </html>
